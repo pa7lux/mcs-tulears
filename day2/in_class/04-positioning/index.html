@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Positioning</title>
+	<link rel="stylesheet" href="reset.css">
+	<style>
+		.outer {
+			position: relative;
+			height: 500px;
+			border: 2px solid orange;
+		}
+		.inner {
+			width: 50px;
+			height: 50px;
+		}
+		.static .inner {
+			margin-top: 15px;
+			background-color: red;
+			position: static;
+		}
+		.relative .inner {
+			position: relative;
+			top: 20px;
+			left: 10px;
+			background-color: purple;
+		}
+		.absolute .inner {
+			position: absolute;
+			bottom: 5%;
+			right: 5%;
+			background-color: green;
+		}
+		.fixed .inner {
+			position: fixed;
+			top: 10px;
+			right: 0;
+			background-color: black;
+		}
+	</style>
+</head>
+<body>
+	<div class="outer static">
+		<div class="inner"></div>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam deleniti quasi ab aliquam, commodi temporibus, amet sunt reprehenderit quisquam praesentium dignissimos voluptatum tempora? Ullam cupiditate quos minima, fugit accusantium quod.</p>
+	</div>
+	<div class="outer relative">
+		<div class="inner"></div>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates dolorum facere adipisci autem quo odio accusantium, modi nam reiciendis odit quibusdam, tempore fugiat, similique hic placeat et. Facere, recusandae reiciendis!</p>
+	</div>
+	<div class="outer absolute">
+		<div class="inner"></div>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero suscipit molestiae fugit perspiciatis saepe debitis rem optio eius architecto consectetur placeat sequi et, nisi accusamus veritatis quos, voluptatibus inventore sint!</p>
+	</div>
+	<div class="outer fixed">
+		<div class="inner"></div>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, cumque dolorem modi, ipsa eveniet ratione inventore recusandae! Natus optio ab quo placeat eos fugiat nam, aperiam architecto autem itaque consequuntur.</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+header {
+	height: 200px;
+	border: 10px solid rgb(0, 255, 0);
+	border-top: 10px dashed purple;
+	border-bottom: 10px dotted rgba(255, 0, 100, .5);
+	background-color: rgba(112, 32, 32, .2);
+	background-image: url('../img/kitten.jpg');
+	background-size: 100px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-size: cover;
+	background-position: center;
+}
+
+section {
+	min-height: 600px;
+}
+
+.mainFooter {
+	height: 100px;
+	background-color: green;
+}
+
+#dom {
+	width: 500px;
+}
+
+.hero .contentZone ul li {
+	color: red;
+}
+
+h1 {
+	font-family: 'Helvetica', 'Arial', sans-serif;
+	font-size: 40px;
+	font-weight: 100;
+	font-style: normal;
+}
+
+a {
+	text-decoration: underline;
+	color: #000080;
+}
+
+p {
+	width: 300px;
+	line-height: 30px;
+	letter-spacing: 2px;
+	text-align: center;
+	text-transform: lowercase;
+}

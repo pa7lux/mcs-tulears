@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Линейные и блочные элементы</title>
+	<link rel="stylesheet" href="reset.css">
+	<style>
+		.block {
+			height: 50px;
+			width: 300px;
+			background-color: cyan;
+			font-size: 0;
+		}
+
+		.halfWidth {
+			display: inline-block;
+			width: 150px;
+			height: 50px;
+			background-color: magenta;
+			font-size: 14px;
+		}
+
+		a {
+			display: block;
+		}
+
+		p {
+			display: inline-block;
+			vertical-align: top;
+		}
+	</style>
+</head>
+<body>
+	<div class="block">
+		<div class="halfWidth">пару слов</div>
+		<div class="halfWidth">от себя</div>
+	</div> 
+
+	<a href="#">FirstLink</a>
+	<a href="#">SecondLink</a>
+
+	<p>Не ветер бушует над бором, <br>
+	Не с гор побежали ручьи, <br>
+	Мороз-воевода дозором <br>
+	Обходит владенья свои.</p>
+
+	<p>Глядит — хорошо ли метели<br>
+	Лесные тропы занесли,
+	И нет ли где трещины, щели,<br>
+	И нет ли где голой земли?<br>
+	</p>
+</body>
+</html>

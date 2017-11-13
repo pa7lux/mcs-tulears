@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Transform</title>
+	<link rel="stylesheet" href="reset.css">
+	<style>
+		div {
+			width: 300px;
+			height: 300px;
+			background-image: url(dali1.jpg);
+			background-size: cover;
+			background-position: center;
+			border-radius: 50%;
+		}
+
+		.rotate {
+			background-image: url(dali1.jpg);
+			border: 10px solid green;
+			transition: all ease-in-out 2s;
+			transition-delay: 1s;
+		}
+
+		.rotate:hover {
+			background-image: url('dali2.jpg');
+			border: 10px solid red;
+		}
+
+		.rotate:active {
+			transform: rotate(180deg);
+		}
+
+		.translate {
+			transition: 1s;
+		}
+
+		.translate:hover {
+			transform: translate(100%, 10%);
+		}
+
+		.scale {
+			transition: 1s;
+		}
+
+		.scale:hover {
+			transform: scale(1.2);
+		}
+
+		.skew {
+			transition: 1s;
+		}
+
+		.skew:hover {
+			transform: skew(20deg, -20deg);
+		}
+	</style>
+</head>
+<body>
+	<div class='rotate'></div>
+	<div class='translate'></div>
+	<div class='scale'></div>
+	<div class='skew'></div>
+</body>
+</html>
