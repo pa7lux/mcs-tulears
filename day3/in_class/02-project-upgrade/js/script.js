@@ -17,7 +17,6 @@ window.addEventListener('load',function(){
 			animationPlayState = 'paused'
 			myCoolEarth.style.animationPlayState = animationPlayState
 			this.style.backgroundImage = 'url("img/rotate_right_arrow.png")'
-			// myCoolEarth.classList.remove('earth-animation')
 		}
 	})
 
@@ -32,7 +31,6 @@ window.addEventListener('load',function(){
 			animationPlayState = 'paused'
 			myCoolEarth.style.animationPlayState = animationPlayState
 			this.style.backgroundImage = 'url("img/rotate_left_arrow.png")'
-			// myCoolEarth.classList.remove('earth-animation')
 		}
 	})
 
