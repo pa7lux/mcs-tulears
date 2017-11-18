@@ -8,6 +8,16 @@
 	}
 }
 
+@keyframes rotatingEarthReverse {
+	from {
+		transform: rotate(360deg);
+	}
+	
+	to {
+		transform: rotate(0deg);
+	}
+}
+
 .page {
 	background-image: url('../img/pattern.jpg');
 }
@@ -41,8 +51,19 @@
 	background-repeat: no-repeat;
 	transition: linear .5s;
 
-	animation: rotatingEarth 10s linear infinite;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-direction: normal;
 	animation-play-state: paused;
+}
+
+.earth.earth-animation {
+	animation-name: rotatingEarth;
+}
+
+.earth.earth-animation-reverse {
+	animation-name: rotatingEarthReverse;
 }
 
 .controls {
