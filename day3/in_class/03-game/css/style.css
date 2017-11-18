@@ -1,0 +1,131 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  height: 200px;
+  background-color: black;
+  display: flex;
+}
+h1 {
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  margin: auto;
+}
+
+p {
+  font-size: 18px;
+}
+
+section, div, header {
+  box-sizing: border-box;
+}
+
+.rules {
+  min-height: 200px;
+  display: flex;
+}
+
+.rules-detail {
+  width: 900px;
+  margin: 20px auto;
+  padding: 30px;
+  border: 2px solid black;
+}
+
+.rules-detail h2 {
+  font-size: 30px;
+  line-height: 50px;
+}
+
+.gamezone {
+  min-height: 500px;
+  display:flex;
+}
+.gamecontainer {
+  width: 700px;
+  min-height: 500px;
+  margin: auto;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  
+}
+.playerZone, .computerZone {
+  width: 300px;
+  min-height: 300px;
+  border: 2px solid black;
+}
+.bigImage {
+  height: 300px;
+  background-image: url(../img/unknown.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.desigion {
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.princess, .samurai, .dragon {
+  height: 50px;
+  width: 50px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+.princess:hover, .samurai:hover, .dragon:hover {
+  border: 2px solid black;
+}
+.princess {
+  background-image: url(../img/princess.jpg);
+}
+.samurai {
+  background-image: url(../img/samurai.png);
+}
+
+.dragon {
+  background-image: url(../img/dragon.jpg);
+}
+
+.vs {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.description {
+  min-height: 100px;
+}
+#go {
+  width: 100%;
+  height: 100px;
+  background-color: black;
+  color: white;
+  border: 0;
+  border-radius: 0;
+  font-size: 1.5em;
+  cursor: pointer;
+  box-shadow: 0 0 10px white;
+}
+#go:focus {
+  outline:none;
+}
+
+#go:hover {
+  opacity: .9;  
+}
+
+.result {
+  display: flex;
+}
+
+.result p {
+  width: 900px;
+  margin: 20px auto;
+  padding: 30px;
+  border: 2px solid black;
+}
