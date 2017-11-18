@@ -2,18 +2,15 @@ window.addEventListener('load',function(){
 	// рабочий код проекта
 	let rightArrow = document.querySelector('.rightArrow')
 	let myCoolEarth = document.querySelector('.earth')
-	let Counter = 0
 	let leftArrow = document.querySelector('.leftArrow')
 
 	rightArrow.addEventListener('click', function(){
-		Counter = Counter+5
-		myCoolEarth.style.transform = 'rotate('+Counter+'deg)' // 'rotate(5deg)'	
+		myCoolEarth.style.animationPlayState = 'running'
+		rightArrow.style.backgroundImage = 'url("img/pause.png")'
 	})
 
 	leftArrow.addEventListener('click', function(){
-		Counter = Counter-5
-		myCoolEarth.style.transform = 'rotate('+(Counter)+'deg)'
-
+		
 	})
 
 	const homeBtn = document.querySelector('.home')
