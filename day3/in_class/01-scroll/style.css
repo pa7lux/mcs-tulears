@@ -9,7 +9,7 @@ div {
 	position: absolute;
 	background-size: contain;
 	background-position: center;
-	transition: .2s;
+	transition: linear .5s;
 }
 
 .facebook {
