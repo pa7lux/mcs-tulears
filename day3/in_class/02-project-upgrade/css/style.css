@@ -1,8 +1,3 @@
-@keyframes rotateEarth {
-	from {transform: rotate(0deg);}
-	to {transform:rotate(360deg);};
-}
-
 .page {
 	background-image: url('../img/pattern.jpg');
 }
@@ -10,7 +5,7 @@
 .monitor {
 	position: relative;
 	display: flex;
-	height: 400px;
+	height: 70vh;
 }
 
 .sun {
@@ -35,17 +30,14 @@
 	background-position: top right;
 	background-repeat: no-repeat;
 	transition: linear .5s;
-	animation: rotateEarth 6s linear infinite;
-	animation-play-state: paused;
 }
-
-
 
 .controls {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	height: 200px;
+	height: 30vh;
+	
 	background-color: rgba(0, 150, 150, 0.5);
 }
 
@@ -57,6 +49,7 @@
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
+	cursor: pointer;
 }
 
 .rightArrow {
@@ -69,4 +62,33 @@
 
 .home {
 	background-image: url('../img/home_icon.png');
+}
+
+.popUp {
+	width: 500px;
+	height: 300px;
+	background-color: white;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	display: none;
+
+}
+
+.descr {
+	margin: auto;
+}
+
+.close {
+	width: 20px;
+	height: 20px;
+	background-image: url(../img/close.png);
+	background-size: contain;
+	background-position: center;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	cursor: pointer;
+	
 }
