@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Objects</title>
 </head>
 <body>
 	<script>
@@ -67,7 +67,80 @@
 			}
 		}
 
-		console.log(javaScriptCourse.teach())
+		
+		// Цикл while
+		const teachers = javaScriptCourse.teachers
+		// let i = 0
+
+		// while (i < teachers.length ) {
+		// 	console.log('Привет, учителЪ, ' + teachers[i])
+		// 	i++
+		// }
+
+
+		// let j = 0
+		// while (j<50000){
+		// 	document.write(j) 
+		// 	j++
+		// }
+
+
+		// for (let x = 0; x < teachers.length; x++) {
+		// 	console.log('Привет, учителЪ, ' + teachers[x])
+		// }
+
+		// for (i in teachers) {
+		// 	console.log('Привет, учитель, ' + teachers[i])
+		// }
+
+		// for (i in javaScriptCourse) {
+		// 	console.log(javaScriptCourse[i])
+		// }
+
+		// for (i of teachers) {
+		// 	console.log('Привет, ' + i + '!')
+		// }
+
+		// teachers.forEach(function(i) {
+		// 	console.log(i)
+		// })
+
 	</script>
+		
+	<div class="page">
+		<p class="red">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat maxime ad nihil similique repellat nostrum quibusdam tempore tempora atque excepturi odio, odit ipsa quisquam voluptatibus ullam labore expedita laboriosam ab.
+		</p>
+		<p class="red">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quam tenetur earum reprehenderit sit fugiat reiciendis porro delectus deserunt qui architecto est maxime magni ad, soluta repellendus sapiente molestias distinctio?
+		</p>
+		<p class="red">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit labore quisquam deserunt reprehenderit vel, voluptatibus eius dolores error modi provident doloremque ipsum, at. Aut est quisquam quo consequatur, dignissimos nisi?
+		</p>
+		<p class="red">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, qui tenetur fugit maiores repudiandae necessitatibus asperiores cupiditate modi incidunt quia reiciendis libero et a, vitae id, porro neque quod ea?
+		</p>
+	</div>
+
+	<script>
+		// const red = document.querySelectorAll('.red')
+		// red.forEach(function(item) {
+		// 	item.style.color = 'red'
+		// })
+
+		// for (i in red) {
+		// 	red[i].style.color = 'green'
+		// }
+
+		const $ = function(selector) {
+			const items = document.querySelectorAll(selector)
+			items.forEach(function(item) {
+				item.style.transform = 'scale(2)'
+			})
+		}
+
+		// $('.red')
+	</script>
+
 </body>
 </html>

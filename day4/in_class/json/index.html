@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JSON</title>
+
+	<script>
+		const javaScriptCourse = {
+			teachers: ['Патлух', 'Клюква'],
+			couratours: [
+				{	// индекс этого объекта — 0, он первый в массиве
+		            name: 'Nadja',
+		            surname: 'Koroleva',
+		            age: 29,
+		            job: 'MCS',
+		            knowsHTML: true
+	        	}
+	        ],
+			assistance: ['Матвей'],
+			offline: true,
+			students: [
+				{ name: 'Oleg', surname: 'Larionov', age: 31, job: 'event', knowsHtml: true },
+				{ name: 'Den', surname:'Dyakov', age: 29, job: 'MCS', knowsHtml: true },
+				{ name: 'Пётр', surname: 'Моргорский', age: 30, job: 'Арт-директор', knowsHtml: false },
+				{ name: 'Gherman', surname: 'Tyurin', age: 12, job: 'student', knowsHTML: true },
+				{ name: 'Vlad', surname: 'Makarikov', age: 19, job: 'MCS', knowsHtml: true },
+				{ name: 'Саша', surname: 'Шепелев', age: 37, job: 'Entrepreneur', knowsHtml: true },
+				{ name: 'Наталья', surname: 'Дунаева', age: 42, job: 'designer', knowHtml: true },
+				{ name: 'Stas', surname: 'Konst', age: 25, job: 'RZD', knowHtml: true },
+			],
+			teach: function() {
+				// черный ящик образования
+				return 'Теперь вы профессионал!'
+			}
+		}
+
+		// Хоббит туда и обратно. Повесть Бильбо Беггинса
+		const jsonCourse = JSON.stringify(javaScriptCourse)
+		const magic = JSON.parse(jsonCourse)
+
+		console.log(magic)
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
