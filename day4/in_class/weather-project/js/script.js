@@ -20,6 +20,8 @@ window.addEventListener('load', function() {
 				document.querySelector(tempSelector).innerHTML = temp
 				document.querySelector(progressSelector).style.width = 100 + temp * 10 + 'px'
 
+				console.log(responseObject)
+
 			} else {
 				console.log('Это фиаско. Если больше двух раз)')
 			}
@@ -31,4 +33,15 @@ window.addEventListener('load', function() {
 	getWeather('Moscow', '#moscowHeading', '#moscowTemp', '#moscowProgress')
 	getWeather('Tokyo', '#tokyoHeading', '#tokyoTemp', '#tokyoProgress')
 	getWeather('Denpasar', '#denpasarHeading', '#denpasarTemp', '#denpasarProgress')
+
+
+	// magic
+	const userContainer = document.querySelector('#userContainer')
+	const magicBtn = document.querySelector('#magicButton')
+	const magicInput = document.querySelector('#whatDoYouWant')
+
+	magicBtn.addEventListener('click', function() {
+		userContainer.style.display = 'block'
+		getWeather(magicInput.value, '#userHeading', '#userTemp', '#userProgress')
+	})
 })

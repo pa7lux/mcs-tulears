@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Weather</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<!-- NAV -->
@@ -52,6 +53,19 @@
 		</div>
 	</div>
 
+	<!-- CITY CARD -->
+	<div id="userContainer" class="container" style="display: none;">
+		<div class="row">
+			<div class="col-12">
+				<h2 id="userHeading"></h2>
+				<h4>Temperature: <span id="userTemp"></span> &deg;C</h4>
+				<div class="progress">
+				  <div id="userProgress" class="progress-bar bg-warning" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div class="container" style="margin-top: 50px;">
 		<div class="row">
 			<div class="col-12">
@@ -73,11 +87,11 @@
 	        </button>
 	      </div>
 	      <div class="modal-body">
-	        <input type="text" class="form-control" placeholder="Введи город, старичок">
+	        <input id="whatDoYouWant" type="text" class="form-control" placeholder="Введи город, старичок">
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Я передумал</button>
-	        <button type="button" class="btn btn-primary">Покажи мне, что ты можешь</button>
+	        <button id="magicButton" type="button" class="btn btn-primary">Покажи мне, что ты можешь</button>
 	      </div>
 	    </div>
 	  </div>
