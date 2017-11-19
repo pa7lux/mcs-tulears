@@ -8,6 +8,12 @@ window.addEventListener('load', function() {
 	const bigImageComputer = document.querySelector('.computerZone .bigImage')
 	const playBtn = document.querySelector('#go')
 	const result = document.querySelector('#resultId')
+	const scorePlayerContainer = document.querySelector('#scorePlayer')
+	const scoreComputerContainer = document.querySelector('#scoreComputer')
+
+	// счет игры
+	let scorePlayer = 0
+	let scoreComputer = 0
 
 	// собираем адреса картинок
 	const princessUrl = getComputedStyle(princess).backgroundImage
@@ -53,18 +59,27 @@ window.addEventListener('load', function() {
 			result.innerHTML = 'Ничья'
 		} else if (currentPlayerImage === princessUrl && currentComputerImage === samuraiUrl) {
 			result.innerHTML = 'Победил игрок! Принцесса соблазнила самурая. Боже.'
+			scorePlayer = scorePlayer + 1
 		} else if (currentPlayerImage === princessUrl && currentComputerImage === dragonUrl) {
 			result.innerHTML = 'Победил компьютер. Дракон похитил принцессу! Шок!'
+			scoreComputer += 1
 		} else if (currentPlayerImage === samuraiUrl && currentComputerImage === princessUrl) {
 			result.innerHTML = 'Победил компьютер. Принцесса соблазнила самурая. Всегда так.'
+			scoreComputer++
 		} else if (currentPlayerImage === samuraiUrl && currentComputerImage === dragonUrl) {
 			result.innerHTML = 'Игрок победил. Самурай WIN Dragon. Hustle.'
+			scorePlayer++
 		} else if (currentPlayerImage === dragonUrl && currentComputerImage === samuraiUrl) {
 			result.innerHTML = 'Победил компьютер. Самурай победил дракона.'
+			scoreComputer++
 		} else if (currentPlayerImage === dragonUrl && currentComputerImage === princessUrl) {
 			result.innerHTML = 'Победил игрок. Дракон похитил принцессу. Сенсация!'
+			scorePlayer++
 		} else {
 			result.innerHTML = 'Ты что, не умеешь играть? Выбери персонажа, мой повелитель.'
 		}
+
+		scorePlayerContainer.innerHTML = scorePlayer
+		scoreComputerContainer.innerHTML = scoreComputer
 	})
 })
