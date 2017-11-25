@@ -2,7 +2,7 @@ window.addEventListener('load', function() {
 	const apiKey = '099715979800997fed902c8c415868c1'
 	const method = 'GET'
 
-	function getWeather(city, headingSelector, tempSelector, progressSelector) {
+	function getWeather(city, headingSelector, tempSelector, progressSelector, pressureHeading, pressureBar) {
 		const url = 'http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=' + apiKey
 		const request = new XMLHttpRequest()
 		
@@ -22,17 +22,20 @@ window.addEventListener('load', function() {
 
 				console.log(responseObject)
 
-			} else {
-				console.log('Это фиаско. Если больше двух раз)')
+				// давление
+				const pressure = parseInt(responseObject.main.pressure * 0.75)
+				document.querySelector(pressureHeading).innerHTML = pressure + ' мм Hg'
+				document.querySelector(pressureBar).style.width = (pressure - 650) * 4 + 'px'
+
 			}
 		})
 
 		request.send()
 	}
 
-	getWeather('Moscow', '#moscowHeading', '#moscowTemp', '#moscowProgress')
-	getWeather('Tokyo', '#tokyoHeading', '#tokyoTemp', '#tokyoProgress')
-	getWeather('Denpasar', '#denpasarHeading', '#denpasarTemp', '#denpasarProgress')
+	getWeather('Moscow', '#moscowHeading', '#moscowTemp', '#moscowProgress', '#moscowPressure', '#moscowPressureBar')
+	getWeather('Tokyo', '#tokyoHeading', '#tokyoTemp', '#tokyoProgress', '#tokyoPressure', '#tokyoPressureBar')
+	getWeather('Denpasar', '#denpasarHeading', '#denpasarTemp', '#denpasarProgress', '#denpasarPressure', '#denpasarPressureBar')
 
 
 	// magic
@@ -42,6 +45,6 @@ window.addEventListener('load', function() {
 
 	magicBtn.addEventListener('click', function() {
 		userContainer.style.display = 'block'
-		getWeather(magicInput.value, '#userHeading', '#userTemp', '#userProgress')
+		getWeather(magicInput.value, '#userHeading', '#userTemp', '#userProgress', '#userPressure', '#userPressureBar')
 	})
 })
