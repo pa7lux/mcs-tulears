@@ -40,12 +40,12 @@
 	</div>
 
 	<script>
-		window.addEventListener('load', function() {
+		window.onload = () => {
 			const popup = document.querySelector('#popup')
 			const form = popup.querySelector('form')
 			const input = popup.querySelector('input')
 
-			form.addEventListener('submit', function(event) {
+			form.addEventListener('submit', event => {
 				event.preventDefault() // предотвращает события по-умолчанию
 
 				const value = parseInt(input.value)
@@ -60,7 +60,7 @@
 					popup.style.opacity = 0
 				}
 			})
-		})
+		}
 	</script>
 </body>
 </html>

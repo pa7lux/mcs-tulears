@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Classes</title>
+</head>
+<body>
+	<script>
+		class User {
+			constructor(name, email, password) {
+				this.name = name
+				this.email = email
+				this.password = password
+			}
+			greet() {
+				alert(`Привет ${this.name}!`)
+			}
+		}
+
+		const Vasya = new User('Вася', 'vasyan666@yandex.ru', 'qwerty')
+		console.log(Vasya)
+
+		// Vasya.greet()
+
+
+		class MaleUser extends User {
+			greet() {
+				super.greet()
+				alert('Ты зарегистрирован!')
+			}
+		}
+
+		class FemaleUser extends User {
+			greet() {
+				super.greet()
+				alert('Ты зарегистрирована!')
+			}	
+		}
+
+		const Valera = new MaleUser('Валера', 'mail@mail.com', '123')
+		console.log(Valera)
+
+
+		const Valeria = new FemaleUser('Валерия', 'mail@mail.com', '123')
+		console.log(Valeria)
+
+		Valeria.greet()
+	</script>
+</body>
+</html>
