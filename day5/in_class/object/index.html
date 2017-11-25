@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript course</title>
+</head>
+<body>
+	<div id="app">
+		<h2 class="heading"></h2>
+		<ul class="description">
+			
+		</ul>
+
+		<h2 class="heading"></h2>
+		<ul class="description"></ul>
+
+		<h2 class="heading"></h2>
+		<ul class="description"></ul>
+
+		<h2 class="heading"></h2>
+		<ul class="description"></ul>
+
+	</div>
+
+	<script>
+		window.addEventListener('load', function() {
+			const javaScriptCourse = {
+				teachers: ['Патлух', 'Клюква'],
+				couratours: [
+					{	// индекс этого объекта — 0, он первый в массиве
+			            name: 'Nadja',
+			            surname: 'Koroleva',
+			            age: 29,
+			            job: 'MCS',
+			            knowsHTML: true
+		        	}
+		        ],
+				assistance: ['Матвей'],
+				offline: true,
+				students: [
+					{ name: 'Oleg', surname: 'Larionov', age: 31, job: 'event', knowsHtml: true },
+					{ name: 'Den', surname:'Dyakov', age: 29, job: 'MCS', knowsHtml: true },
+					{ name: 'Пётр', surname: 'Моргорский', age: 30, job: 'Арт-директор', knowsHtml: false },
+					{ name: 'Gherman', surname: 'Tyurin', age: 12, job: 'student', knowsHTML: true },
+					{ name: 'Vlad', surname: 'Makarikov', age: 19, job: 'MCS', knowsHtml: true },
+					{ name: 'Саша', surname: 'Шепелев', age: 37, job: 'Entrepreneur', knowsHtml: true },
+					{ name: 'Наталья', surname: 'Дунаева', age: 42, job: 'designer', knowsHtml: true },
+					{ name: 'Stas', surname: 'Konst', age: 25, job: 'RZD', knowsHtml: true },
+				],
+				teach: function() {
+					// черный ящик образования
+					return 'Теперь вы профессионал!'
+				}
+			}
+
+			javaScriptCourse.teachers[1] = 'Матвей?'
+			javaScriptCourse.teachers = javaScriptCourse.teachers.slice(0, 1)
+			javaScriptCourse.teachers.push('Клюква')
+
+			// Заголовки
+			const headings = document.querySelectorAll('.heading') // querySelectorAll всегда возвращает массив
+			const lists = document.querySelectorAll('.description') // querySelectorAll всегда возвращает массив
+			let counter = 0
+
+			for (keyName in javaScriptCourse) {
+				if (keyName != 'teach' && keyName != 'offline') {
+					headings[counter].innerHTML = keyName
+					counter++
+				}
+			}
+
+			let liTeachers = ''
+			for (name of javaScriptCourse.teachers) {
+				liTeachers = liTeachers + '<li>' + name + '</li>'
+			}
+			lists[0].innerHTML = liTeachers
+
+
+			let liAssistance = ''
+			for (name of javaScriptCourse.assistance) {
+				liAssistance = liAssistance + '<li>' + name + '</li>'
+			}
+			lists[2].innerHTML = liAssistance
+
+			let liCourators = ''
+			javaScriptCourse.couratours.forEach(function(item) {
+				liCourators += '<li>' + item.name + ' ' + item.surname + '</li>'
+			})
+			lists[1].innerHTML = liCourators
+
+			let liStudents = ''
+			javaScriptCourse.students.forEach(function(item) {
+				liStudents += '<li>' + item.name + ' ' + item.surname + '</li>'
+			})
+			lists[3].innerHTML = liStudents
+		})
+	</script>
+</body>
+</html>
