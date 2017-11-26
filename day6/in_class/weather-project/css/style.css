@@ -1,0 +1,30 @@
+.row {
+	margin-bottom: 30px;
+}
+
+/*.container {
+	position: relative;
+	overflow: hidden;
+}
+
+.container:hover::before,
+.container:hover::after {
+	transform: translateY(0);
+}
+
+.container::before,
+.container::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(255, 0, 0, .3);
+	transform: translateY(100%);
+	transition: all ease 100ms;
+}
+
+.container::after {
+	transform: translateY(-100%);
+}*/
